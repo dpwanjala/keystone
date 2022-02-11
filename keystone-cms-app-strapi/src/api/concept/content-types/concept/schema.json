@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "concepts",
+  "info": {
+    "singularName": "concept",
+    "pluralName": "concepts",
+    "displayName": "Concept",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "review_materials": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::review-material.review-material",
+      "inversedBy": "concepts"
+    }
+  }
+}

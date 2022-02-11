@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "review_materials",
+  "info": {
+    "singularName": "review-material",
+    "pluralName": "review-materials",
+    "displayName": "Review Material"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "url": {
+      "type": "string"
+    },
+    "concepts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::concept.concept",
+      "inversedBy": "review_materials"
+    }
+  }
+}
