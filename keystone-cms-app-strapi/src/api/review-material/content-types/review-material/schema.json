@@ -24,7 +24,13 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::concept.concept",
-      "inversedBy": "review_materials"
+      "mappedBy": "review_materials"
+    },
+    "recommended_review_materials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::recommended-review-material.recommended-review-material",
+      "mappedBy": "review_material"
     }
   }
 }

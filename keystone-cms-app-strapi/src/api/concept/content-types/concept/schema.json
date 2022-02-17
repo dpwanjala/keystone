@@ -13,13 +13,21 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "review_materials": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::review-material.review-material",
       "inversedBy": "concepts"
+    },
+    "student_concept_assessments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::student-concept-assessment.student-concept-assessment",
+      "mappedBy": "concept"
     }
   }
 }

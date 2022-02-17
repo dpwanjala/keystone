@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "student_concept_assessments",
+  "info": {
+    "singularName": "student-concept-assessment",
+    "pluralName": "student-concept-assessments",
+    "displayName": "Student Concept Assessment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "student": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::student.student",
+      "inversedBy": "student_concept_assessments"
+    },
+    "concept": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::concept.concept",
+      "inversedBy": "student_concept_assessments"
+    },
+    "assessment": {
+      "type": "integer",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "professor",
+        "peerTutor",
+        "self"
+      ]
+    }
+  }
+}

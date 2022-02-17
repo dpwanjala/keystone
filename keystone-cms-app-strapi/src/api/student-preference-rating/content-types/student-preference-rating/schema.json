@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "student_preference_ratings",
+  "info": {
+    "singularName": "student-preference-rating",
+    "pluralName": "student-preference-ratings",
+    "displayName": "Student Preference Rating"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "concept",
+        "other"
+      ]
+    },
+    "student": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::student.student",
+      "inversedBy": "student_preference_ratings"
+    },
+    "rating": {
+      "type": "integer"
+    }
+  }
+}

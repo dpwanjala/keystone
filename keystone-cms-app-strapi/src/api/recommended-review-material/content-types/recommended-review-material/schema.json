@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recommended_review_materials",
+  "info": {
+    "singularName": "recommended-review-material",
+    "pluralName": "recommended-review-materials",
+    "displayName": "Recommended Review Material"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "student": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::student.student",
+      "inversedBy": "recommended_review_materials"
+    },
+    "review_material": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::review-material.review-material",
+      "inversedBy": "recommended_review_materials"
+    },
+    "recommendationScore": {
+      "type": "float"
+    }
+  }
+}
