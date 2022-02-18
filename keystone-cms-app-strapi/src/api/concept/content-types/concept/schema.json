@@ -28,12 +28,6 @@
       "relation": "oneToMany",
       "target": "api::student-concept-assessment.student-concept-assessment",
       "mappedBy": "concept"
-    },
-    "review_material_concept_assessment": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::review-material-concept-assessment.review-material-concept-assessment",
-      "mappedBy": "concept"
     }
   }
 }
