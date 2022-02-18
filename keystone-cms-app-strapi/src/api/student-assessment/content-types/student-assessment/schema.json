@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "student_concept_assessments",
+  "collectionName": "student_assessments",
   "info": {
-    "singularName": "student-concept-assessment",
-    "pluralName": "student-concept-assessments",
-    "displayName": "Student Concept Assessment",
-    "description": ""
+    "singularName": "student-assessment",
+    "pluralName": "student-assessments",
+    "displayName": "Student Assessment"
   },
   "options": {
     "draftAndPublish": true
@@ -16,25 +15,24 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::student.student",
-      "inversedBy": "student_concept_assessments"
+      "inversedBy": "student_assessments"
     },
     "concept": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::concept.concept",
-      "inversedBy": "student_concept_assessments"
-    },
-    "assessment": {
-      "type": "integer",
-      "required": true
+      "inversedBy": "student_assessments"
     },
     "type": {
       "type": "enumeration",
       "enum": [
-        "professor",
-        "peerTutor",
-        "self"
+        "self",
+        "peer",
+        "professor"
       ]
+    },
+    "assessment": {
+      "type": "float"
     }
   }
 }

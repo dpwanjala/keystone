@@ -16,12 +16,6 @@
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user"
     },
-    "student_concept_assessments": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::student-concept-assessment.student-concept-assessment",
-      "mappedBy": "student"
-    },
     "student_preference_ratings": {
       "type": "relation",
       "relation": "oneToMany",
@@ -32,6 +26,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::recommended-review-material.recommended-review-material",
+      "mappedBy": "student"
+    },
+    "student_assessments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::student-assessment.student-assessment",
       "mappedBy": "student"
     }
   }

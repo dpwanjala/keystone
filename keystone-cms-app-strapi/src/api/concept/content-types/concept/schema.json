@@ -17,17 +17,25 @@
       "required": true,
       "unique": true
     },
-    "review_materials": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::review-material.review-material",
-      "inversedBy": "concepts"
-    },
-    "student_concept_assessments": {
+    "review_material_assessments": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::student-concept-assessment.student-concept-assessment",
+      "target": "api::review-material-assessment.review-material-assessment",
       "mappedBy": "concept"
+    },
+    "student_assessments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::student-assessment.student-assessment",
+      "mappedBy": "concept"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "qskills",
+        "qskillsstrand",
+        "preference"
+      ]
     }
   }
 }

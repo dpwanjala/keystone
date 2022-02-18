@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "review_material_assessments",
+  "info": {
+    "singularName": "review-material-assessment",
+    "pluralName": "review-material-assessments",
+    "displayName": "Review Material Assessment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "review_material": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::review-material.review-material",
+      "inversedBy": "review_material_assessments"
+    },
+    "concept": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::concept.concept",
+      "inversedBy": "review_material_assessments"
+    },
+    "assessment": {
+      "type": "integer"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "manual",
+        "ai"
+      ],
+      "default": "manual"
+    }
+  }
+}
