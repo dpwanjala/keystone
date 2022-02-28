@@ -8,7 +8,7 @@ const args = {
     headers: {
     Accept: "application/json",
     "Content-Type": "application/json;charset=UTF-8",
-    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQ0NTU0NjUwLCJleHAiOjE2NDcxNDY2NTB9.aQY-O1cc_vLQtV-9KvOlspMw1oqBfBiW08YPz0eUdmQ", // Notice Bearer not JWT and no credentials include
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQ2MDUyODA4LCJleHAiOjE2NDg2NDQ4MDh9.u69OfcYWMP1Eam78S-_nVjmQUhc6RdMebKjqxSXvErk", // Notice Bearer not JWT and no credentials include
     },
 };
 
@@ -16,7 +16,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
 function ReviewMaterials() {
 
-    const url = "http://localhost:1337/api/review-materials?populate=*";
+    const url = "http://personaltutor.ca:1337/api/review-materials?populate=*";
 
     const { data, error } = useSWR([url, args], fetcher)
 

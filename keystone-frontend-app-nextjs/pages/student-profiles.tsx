@@ -1,41 +1,48 @@
-import Link from 'next/link'
-import useSWR from 'swr'
+function StudentProfiles(){
+  return (
+    <div>StudentProfiles</div>
+  );
+}
 
-const args = {
-    method: "GET",
-    headers: {
-    Accept: "application/json",
-    "Content-Type": "application/json;charset=UTF-8",
-    },
-};
+export default StudentProfiles
+// import Link from 'next/link'
+// import useSWR from 'swr'
 
-const fetcher = (...args) => fetch(...args).then((res) => res.json())
+// const args = {
+//     method: "GET",
+//     headers: {
+//     Accept: "application/json",
+//     "Content-Type": "application/json;charset=UTF-8",
+//     },
+// };
 
-
-function RecommendedReviewMaterials() {
-
-    const url = "http://localhost:1337/api/students";
-
-    const { data, error } = useSWR([url, args], fetcher)
-
-    if (error) return <div>Failed to load</div>
-    if (!data) return <div>Loading...</div>
-    console.log(data.data)
+// const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
 
-    // Render review materials
-    return (
-    <div>
-      {data.data.map((item) => 
-        <div key={item.id}>
-          <Link href={`/student-profiles/${item.id}`}>
-          <h4><a>{item.id}</a></h4>
-          </Link>
-        </div>
-        )}
+// function RecommendedReviewMaterials() {
+
+//     const url = "http://localhost:1337/api/students";
+
+//     const { data, error } = useSWR([url, args], fetcher)
+
+//     if (error) return <div>Failed to load</div>
+//     if (!data) return <div>Loading...</div>
+//     console.log(data.data)
+
+
+//     // Render review materials
+//     return (
+//     <div>
+//       {data.data.map((item) => 
+//         <div key={item.id}>
+//           <Link href={`/student-profiles/${item.id}`}>
+//           <h4><a>{item.id}</a></h4>
+//           </Link>
+//         </div>
+//         )}
         
-    </div>
-    );
-  }
+//     </div>
+//     );
+//   }
 
-export default RecommendedReviewMaterials
+// export default RecommendedReviewMaterials

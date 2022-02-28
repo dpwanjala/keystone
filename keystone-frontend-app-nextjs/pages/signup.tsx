@@ -4,11 +4,11 @@ import HeaderContentFooter from '../layouts/header-content-footer';
 
 function Signup(){
  
-  const onFinish = (values) => {
+  const onFinish = (values: any) => {
     console.log('Success:', values);
   };
 
-  const onFinishFailed = (errorInfo) => {
+  const onFinishFailed = (errorInfo: any) => {
     console.log('Failed:', errorInfo);
   };
 
