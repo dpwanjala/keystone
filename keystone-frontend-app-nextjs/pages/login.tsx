@@ -1,11 +1,16 @@
 import { Form, Input, Button, Checkbox } from 'antd';
 import HeaderContentFooter from '../layouts/header-content-footer';
+import Router from 'next/router'
+
 
 
 function Login(){
  
+  
   const onFinish = (values: any) => {
     console.log('Success:', values);
+    //const router = useRouter()
+    Router.push('/personalized-recommendations')
   };
 
   const onFinishFailed = (errorInfo: any) => {
