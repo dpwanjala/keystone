@@ -24,8 +24,8 @@ export default function Index() {
       </div>
 
       <div>
-      <Link href={`/personalized-recommendations`}>
-      <a>Get tailored review material recommendations for concepts you need to cover</a>
+      <Link href={`/login`}>
+      <a>Get personalized review material recommendations for concepts you need to cover</a>
       </Link>
       </div>
    </div>
