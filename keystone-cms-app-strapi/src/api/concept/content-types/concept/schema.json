@@ -36,6 +36,12 @@
         "qskillsstrand",
         "preference"
       ]
+    },
+    "review_materials": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::review-material.review-material",
+      "inversedBy": "concepts"
     }
   }
 }

@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "review_material": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::review-material.review-material",
-      "inversedBy": "review_material_assessments"
-    },
     "concept": {
       "type": "relation",
       "relation": "manyToOne",
@@ -34,6 +28,12 @@
         "ai"
       ],
       "default": "manual"
+    },
+    "review_materials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review-material.review-material",
+      "mappedBy": "review_material_assessment"
     }
   }
 }

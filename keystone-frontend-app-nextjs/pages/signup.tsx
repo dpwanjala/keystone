@@ -2,7 +2,7 @@ import { Form, Input, Button, Checkbox } from 'antd';
 import HeaderContentFooter from '../layouts/header-content-footer';
 
 
-function Login(){
+function Signup(){
  
   const onFinish = (values) => {
     console.log('Success:', values);
@@ -55,18 +55,7 @@ function Login(){
           >
             <Input.Password />
           </Form.Item>
-    
-          <Form.Item
-            name="remember"
-            valuePropName="checked"
-            wrapperCol={{
-              offset: 8,
-              span: 16,
-            }}
-          >
-            <Checkbox>Remember me</Checkbox>
-          </Form.Item>
-    
+        
           <Form.Item
             wrapperCol={{
               offset: 8,
@@ -74,7 +63,7 @@ function Login(){
             }}
           >
             <Button type="primary" htmlType="submit">
-              Login
+              Signup
             </Button>
           </Form.Item>
         </Form>
@@ -83,4 +72,4 @@ function Login(){
       );
 }
 
-export default Login
+export default Signup

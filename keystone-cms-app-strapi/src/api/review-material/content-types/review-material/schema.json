@@ -4,7 +4,8 @@
   "info": {
     "singularName": "review-material",
     "pluralName": "review-materials",
-    "displayName": "Review Material"
+    "displayName": "Review Material",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -26,11 +27,17 @@
       "target": "api::recommended-review-material.recommended-review-material",
       "mappedBy": "review_material"
     },
-    "review_material_assessments": {
+    "review_material_assessment": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToOne",
       "target": "api::review-material-assessment.review-material-assessment",
-      "mappedBy": "review_material"
+      "inversedBy": "review_materials"
+    },
+    "concepts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::concept.concept",
+      "inversedBy": "review_materials"
     }
   }
 }
