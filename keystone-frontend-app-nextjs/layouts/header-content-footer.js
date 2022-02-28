@@ -9,7 +9,7 @@ export default function HeaderContentFooter(props){
         <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
          <Row justify='space-between'>
           <Col>
-              <h3><Link href="/">PERSONALTUTOR</Link></h3>
+              <h3 style={{color: "white"}}><Link href="/">PERSONALTUTOR</Link></h3>
           </Col>  
           <Col>
             <Menu theme="dark" mode="horizontal" defaultSelectedKeys={[]}>
