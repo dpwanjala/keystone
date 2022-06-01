@@ -18,7 +18,7 @@ export default function About() {
           recommendation system that gathers, structures and analyzes student assessments to recommend the best review materials to help
           improve individual student performances</li></ul>
 
-        <p><a href='https://drive.google.com/file/d/13pDzmGwiubOnSOr3w-_R4B-EeHoD8y0J/view?usp=sharing'>READMORE</a></p>
+        <p><a href='https://drive.google.com/file/d/1ZJB1JbzquY04TYrsCVflFl_94ID8-Tbt/view?usp=sharing'>READMORE</a></p>
     </div>
      </HeaderContentFooter>
     );
