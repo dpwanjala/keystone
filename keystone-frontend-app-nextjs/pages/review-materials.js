@@ -8,7 +8,7 @@ const args = {
     headers: {
     Accept: "application/json",
     "Content-Type": "application/json;charset=UTF-8",
-    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQ2MDUyODA4LCJleHAiOjE2NDg2NDQ4MDh9.u69OfcYWMP1Eam78S-_nVjmQUhc6RdMebKjqxSXvErk", // Notice Bearer not JWT and no credentials include
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU0MTAwMzEyLCJleHAiOjE2NTY2OTIzMTJ9.RhMAbZ67Dfq17yBCi5qI8cbE6ZBj2vrcKpRxcRuo7Lw", // Notice Bearer not JWT and no credentials include
     },
 };
 
